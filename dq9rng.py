@@ -5,7 +5,7 @@ def rand():
     global seed
     seed = (seed * 0x5d588b656c078965) + 0x269ec3
     seed = seed & 0xFFFFFFFFFFFFFFFF
-    return (seed >> 32) & 0xFFFFFFFF
+    return seed >> 32
 
 
 def percentage(value):
