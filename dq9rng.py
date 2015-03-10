@@ -58,9 +58,9 @@ def rand_search(low, high, number=None, depth=None):
 if __name__ == "__main__":
     low = reverse_percentage(0.95)
     high = reverse_percentage(0.96)
-    print low, high
-    print rand_search(low, high, number=1)[0]
+    print "%x %x" % (low, high)
+    print ["%x" % j for j in rand_search(low, high, number=1)[0]]
     initials = rand_search(low, high, depth=1)
     for i in initials:
-        print i, percentage(i[-1] >> 32)
+        print ["%x" % j for j in i], percentage(i[-1] >> 32)
     print len(initials)
